@@ -1,5 +1,15 @@
 # About
 
-This is some of the material I made to complete Coursera's [**API Development and Architecture**](https://www.coursera.org/specializations/api-development-and-architecture) specialization, although I've already utilized and created APIs for different projects it's always good to revisit some core components and learn new design techniques . <br>
+This is the first module [Getting Started with APIs](https://www.coursera.org/learn/getting-started-with-apis), here I had an introduction to:
 
-In each section you'll see a *README* with a small description on the module as well as some techincal documentation on the final project. 
+- **RESTful** API design principles (methods, status codes, routes)
+- Clear [*Documentation*](./final_project/documentation.md) 
+- Manual testing with **Postman** and automated testing via python scripts <br>
+
+This module did NOT discuss security, authentication nor protection tools so this project assumes no bad actors get access to the endpoints.
+
+# Certificate of Completion
+
+![alt text](certificate.png)
+
+[PDF](<Coursera 92MW1WYXDPZA.pdf>)
