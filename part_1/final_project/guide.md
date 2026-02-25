@@ -21,8 +21,6 @@ Riverside has 5 districts: Downtown, Northside, Eastside, Westside, and Southsid
 |---|---|
 | `books.csv` | The bookstore's catalog — 20 books with pricing, stock levels, and metadata |
 | `city_services.csv` | 18 city services across all categories and districts |
-| `book_orders.csv` | 20 customer orders in various states of completion |
-| `service_events.csv` | 20 recorded changes to city services over the course of a day |
 
 Load these into a database as your starting data.
 
@@ -60,21 +58,6 @@ The system must prevent two books from sharing the same ISBN.
 
 ---
 
-### Orders
-
-Customers and staff need to be able to:
-- Place an order for a book
-- View a list of all orders, filterable by customer or by status
-- Look up a specific order
-- Update an order's status (e.g. move it from processing to shipped)
-- Cancel an order
-
-**Important business rules:**
-- When an order is placed, the stock count for that book must go down by the quantity ordered
-- If a customer tries to order more copies than are in stock, the system must refuse the request
-- When an order is cancelled, the stock must be returned to what it was before the order
-
----
 
 ### Real-Time Service Updates
 

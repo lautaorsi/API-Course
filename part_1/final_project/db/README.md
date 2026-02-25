@@ -1,11 +1,9 @@
 # SCHEMA
 
-Acá presento el esquema usado en la base de datos
+Acá presento el esquema usado en la base de datos, todos los campos deben ser not-null.
 
 * [books](#books)
 * [services](#services)
-* [book_orders](#book_orders)
-* [service_events](#service_events)
 
 ---
 
@@ -14,7 +12,7 @@ Acá presento el esquema usado en la base de datos
 
 | Column | Data Type |
 | :--- | :--- |
-|"book_id" |TEXT|
+|"book_id" |TEXT (UNIQUE)|
 |"isbn" |TEXT|
 |"title" |TEXT|
 |"author" |TEXT|
@@ -53,33 +51,3 @@ Acá presento el esquema usado en la base de datos
 | last_updated | TEXT |
 | description | TEXT |
 
-## book_orders
-| Column Name | Data Type |
-| :--- | :--- |
-| order_id | TEXT |
-| customer_id | TEXT |
-| customer_name | TEXT |
-| customer_email | TEXT |
-| book_id | TEXT |
-| book_title | TEXT |
-| quantity | TEXT |
-| unit_price | TEXT |
-| total_price | TEXT |
-| order_date | TEXT |
-| status | TEXT |
-| shipping_address | TEXT |
-| payment_method | TEXT |
-| tracking_number | TEXT |
-
-## service_events
-| Column Name | Data Type |
-| :--- | :--- |
-| event_id | TEXT |
-| service_id | TEXT |
-| service_name | TEXT |
-| event_type | TEXT |
-| timestamp | TEXT |
-| old_value | TEXT |
-| new_value | TEXT |
-| triggered_by | TEXT |
-| description | TEXT |
