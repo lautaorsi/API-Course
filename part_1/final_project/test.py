@@ -80,7 +80,7 @@ def test_crud(client):
     # GET existent single book returns book
     response = client.get("/books/B001")
     body = response.get_json()
-    assert body["book"][0] == existing_book
+    assert body["book"] == existing_book
     assert response.status_code == 200
 
     # GET non-existent single book returns 404
@@ -100,7 +100,7 @@ def test_crud(client):
     client.post("/books", json=valid_new_book)
     response = client.get("/books/B840")
     body = response.get_json()
-    assert body["book"][0] == valid_new_book
+    assert body["book"] == valid_new_book
     assert response.status_code == 200
 
     # POST already existing book fails
@@ -142,6 +142,6 @@ def test_crud(client):
     # PATCH existing book modifies db
     response = client.get("/books/B001")
     body = response.get_json()
-    book = body["book"][0]
+    book = body["book"]
     assert book["stock_quantity"] == "44" 
 

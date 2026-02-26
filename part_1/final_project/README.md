@@ -4,7 +4,7 @@
 
 This API provides access to the city's database (see [*database documentation*](./db/README.md) for schema).
 
-Users will be able to look up, update, delete and add books and services to the database itself. Here you will find a list of [Endpoints](#endpoints), [Responses](#Responses), [Examples](#Examples) and [Testing](#Testing)
+Users will be able to look up, update, delete and add books and services to the database itself. Here you will find a list of [Endpoints](#endpoints), [Responses](#Responses) and [Examples](#Examples)
 
 ---
 
@@ -39,7 +39,7 @@ Otherwise response will be `404` with body:
 ```json
 {
     "error": "Resource not found",
-    "message": "Book with ID bookId was not found in the database"
+    "message": "Item with ID not found in the database"
 }
 ```
 
@@ -56,7 +56,7 @@ Otherwise, if book is poorly formatted response will be `400` with body:
 ```json
 {
     "error": "Bad request",
-    "message": "Incorrect book format"
+    "message": "Incorrect format"
 }
 ```
 
@@ -65,7 +65,7 @@ Or if the book already exists, `409` response with body:
 ```json
 {
     "error": "Conflict",
-    "message": "Book already exists"
+    "message": "Item already exists"
 }
 ```
 
@@ -82,7 +82,7 @@ Otherwise, a `404` response is sent with body:
 ```json
 {
     "error": "Resource not found",
-    "message": "Book with ID bookId was not found in the database"
+    "message": "Item with ID not found in the database"
 }
 ```
 
@@ -99,7 +99,7 @@ Otherwise, if new data is poorly formatted, response will be `400` with body:
 ```json
 {
     "error": "Bad request",
-    "message": "Incorrect data format"
+    "message": "Incorrect format"
 }
 ```
 
@@ -108,7 +108,7 @@ Or if the book is not found, `404` with body:
 ```json
 {
     "error": "Resource not found",
-    "message": "Book was not found in the database"
+    "message": "Item with ID not found in the database"
 }
 ```
 
@@ -139,7 +139,7 @@ Otherwise response will be `404` with body:
 ```json
 {
     "error": "Resource not found",
-    "message": "Service with ID serviceId was not found in the database"
+    "message": "Item with ID not found in the database"
 }
 ```
 
@@ -156,7 +156,7 @@ Otherwise, if service is poorly formatted response will be `400` with body:
 ```json
 {
     "error": "Bad request",
-    "message": "Incorrect service format"
+    "message": "Incorrect format"
 }
 ```
 
@@ -165,7 +165,7 @@ Or if the service already exists, `409` response with body:
 ```json
 {
     "error": "Conflict",
-    "message": "Service already exists"
+    "message": "Item already exists"
 }
 ```
 
@@ -182,7 +182,7 @@ Otherwise, a `404` response is sent with body:
 ```json
 {
     "error": "Resource not found",
-    "message": "Service with ID serviceId was not found in the database"
+    "message": "Item with ID not found in the database"
 }
 ```
 
@@ -199,7 +199,7 @@ Otherwise, if new data is poorly formatted, response will be `400` with body:
 ```json
 {
     "error": "Bad request",
-    "message": "Incorrect data format"
+    "message": "Incorrect format"
 }
 ```
 
@@ -208,14 +208,46 @@ Or if the service is not found, `404` with body:
 ```json
 {
     "error": "Resource not found",
-    "message": "Service was not found in the database"
+    "message": "Item with ID not found in the database"
 }
 ```
 
 ---
 
-## Error Handling
-
 ## Examples
 
-## Testing Instructions
+-   Valid GET single book <br>
+    -   Request: /books/B001
+    -   Response: 
+```json 
+    {
+        "book_id": "B001", 
+        "isbn": "978-0-06-112008-4",
+        "title": "To Kill a Mockingbird",
+        "author": "Harper Lee",
+        "genre": "Fiction",
+        "publisher": "HarperCollins",
+        "published_year": "1960",
+        "price": "12.99",
+        "stock_quantity": "45",
+        "pages": "336",
+        "language": "English",
+        "rating": "4.8",
+        "description": "A novel about racial injustice and childhood in the American South"
+    }
+```
+-   Invalid PATCH book <br>
+    -   Request: /books/B001
+        >Body:{"language" : 45}
+    -   Response: 
+```json 
+    {
+        "error": "Bad request",
+        "message": "Incorrect format"
+    }
+```
+- DELETE sevice <br>
+    -   Request: /services/CS015
+
+    -   Response:
+        > HEADER: 200 OK

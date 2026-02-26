@@ -31,7 +31,7 @@ def book_search(bookId):
     if len(book) == 0:
         return not_found, 404
     else:
-        return jsonify({"book":book}), 200
+        return jsonify({"book":book[0]}), 200
 
 @app.post("/books")
 def book_add():
