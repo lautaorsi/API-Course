@@ -8,6 +8,7 @@
 from django.db import models
 
 
+# Modelo para curso
 class Courses(models.Model):
     course_id = models.AutoField(primary_key=True)
     course_title = models.CharField(max_length=255)
