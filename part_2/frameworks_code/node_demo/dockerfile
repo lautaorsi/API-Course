@@ -1,0 +1,20 @@
+# imagen liviana de Node.js
+FROM node:25-alpine
+
+# directorio de trabajo
+WORKDIR /app
+
+# Copiar package.json y package-lock.json
+COPY package*.json ./
+
+# Instalar dependencias
+RUN npm install
+
+# Copiar el resto de la aplicación
+COPY . .
+
+# Exponemos puerto
+EXPOSE 3000
+
+# Empezar servidor
+CMD ["npm", "start"]

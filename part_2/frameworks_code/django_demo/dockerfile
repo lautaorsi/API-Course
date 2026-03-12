@@ -1,0 +1,21 @@
+# imagen de python
+FROM python
+
+# directorio padre
+WORKDIR /app
+
+# Copiar e instalar dependencias
+COPY requirements.txt .
+RUN pip install -r requirements.txt
+
+# Copiar el resto de la aplicación
+COPY . .
+
+# directorio de trabajo
+WORKDIR /app/myproject
+
+# Exponemos puerto
+EXPOSE 5000
+
+# Empezar servidor
+CMD ["python", "manage.py", "runserver", "0.0.0.0:5000"]
