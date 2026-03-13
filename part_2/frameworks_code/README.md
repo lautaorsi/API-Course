@@ -13,8 +13,6 @@ Esto se encarga automaticamente de instalar las dependencias y levantar los serv
 -   [localhost:3000/api/v1/courses](http://localhost:3000/api/v1/courses) &rarr; Node
 -   [localhost:5000/api/v1/courses](http://localhost:5000/api/v1/courses) &rarr; Django
 
-Notese que las primeras dos fallan dado que no
-
 ## Esquema de la database
 | Column Name    | Data Type     | Constraints          | Example Value                |
 | :------------- | :------------ | :------------------- | :--------------------------- |
@@ -25,5 +23,5 @@ Notese que las primeras dos fallan dado que no
 --- 
 
 **Importante:** <br>
-La base de datos va a contener además una tabla predeterminada creada por Django.
+La base de datos va a contener además una tabla predeterminada creada por Django. <br>
 Incluyo la base de datos en el repositorio dado que contiene simplemente 12 registros dummy para fines demostrativos
