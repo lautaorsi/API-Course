@@ -17,12 +17,12 @@ services:
     environment:
       - DB_PATH=/app/myproject/db.sqlite3
 
-
-#  springboot-app:      TODO
-#    build: ./springboot_demo
-#    ports:
-#      - "8080:8080"
-#    volumes:
-#      - ./db.sqlite3:/app/db.sqlite3
-#    environment:
-#      - DB_PATH=/app/db.sqlite3
+  springboot-app:
+    build: ./springboot_demo
+    ports:
+      - "8080:8080"
+    volumes:
+      - ./db.sqlite3:/app/db.sqlite3
+    environment:
+      - SPRING_DATASOURCE_URL=jdbc:sqlite:/app/db.sqlite3
+      - SPRING_DATASOURCE_DRIVER_CLASS_NAME=org.sqlite.JDBC

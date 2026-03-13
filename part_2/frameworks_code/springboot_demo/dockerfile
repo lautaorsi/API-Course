@@ -1,0 +1,17 @@
+# imagen de openjdk, la base quedó obsoleta entonces elijo otra 
+FROM eclipse-temurin:17-jdk-focal
+
+# directorio padre
+WORKDIR /app
+
+# Instalamos dependencia
+RUN apt update && apt install maven -y
+
+# Copiar el resto de la aplicación
+COPY . .
+
+# Exponemos puerto
+EXPOSE 8080
+
+# Empezar servidor
+CMD ["mvn", "spring-boot:run"]
