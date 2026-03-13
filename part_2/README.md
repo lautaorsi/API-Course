@@ -9,5 +9,5 @@ A estas API's vamos a además agregarle distintas funcionalidades a medida que v
 -   Versioning [✓]  
 -   Data Validation [X] 
 -   Caching [X]
-
+.   Error Handling [X]
 
