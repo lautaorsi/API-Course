@@ -18,13 +18,13 @@ const db = await open({
 
 
 //GET para todos los cursos
-app.get('/api/courses', async (req,res) => {
+app.get('/api/v1/courses', async (req,res) => {
     res.json(await db.all('SELECT * FROM courses;'))
 })
 
 
 //GET para cursos especificos
-app.get('/api/courses/:id', async (req,res) => {
+app.get('/api/v1/courses/:id', async (req,res) => {
     const id = parseInt(req.params.id, 10)
     
     const item =  await db.get(`SELECT * FROM courses WHERE course_id = ${id};`)
@@ -35,7 +35,7 @@ app.get('/api/courses/:id', async (req,res) => {
 })
 
 //POST nuevos cursos
-app.post('/api/courses', async (req,res) => {
+app.post('/api/v1/courses', async (req,res) => {
     const {course_title, credits} = req.body
 
     //Hacemos un simple chequeo para asegurarnos que tenga ambos campos (esto no contempla "", pero para este proyecto no es necesario)
@@ -48,7 +48,7 @@ app.post('/api/courses', async (req,res) => {
 })
 
 //DELETE para cursos (se puede hacer inyección para borrar todo, pero este proyecto no contempla seguridad)
-app.delete('/api/courses/:id', async (req,res) =>{
+app.delete('/api/v1/courses/:id', async (req,res) =>{
     const id = parseInt(req.params.id, 10);
     
     let status;
@@ -65,7 +65,7 @@ app.delete('/api/courses/:id', async (req,res) =>{
 })
 
 
-app.patch('/api/courses/:id', async (req,res) => {
+app.patch('/api/v1/courses/:id', async (req,res) => {
     const id = parseInt(req.params.id, 10)
     
     const {course_title, credits} = req.body

@@ -7,7 +7,7 @@ import org.springframework.web.bind.annotation.*;
 import java.util.List;
 
 @RestController
-@RequestMapping("/api/courses") //Definimos para endpoint de usuarios
+@RequestMapping("/api/v1/courses") //Definimos para endpoint de usuarios
 public class CourseController {
 
     @Autowired

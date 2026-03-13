@@ -4,5 +4,10 @@ En este curso vamos a armar un simple servicio de API REST usando 3 distintos fr
 -   [Node.js](./node_demo/) (Javascript)
 -   [Spring Boot](./springboot_demo/) (Java)
 
+A estas API's vamos a además agregarle distintas funcionalidades a medida que voy avanzando con el curso, entre ellas:
+-   Serialization [✓]   
+-   Versioning [✓]  
+-   Data Validation [X] 
+-   Caching [X]
 
 
