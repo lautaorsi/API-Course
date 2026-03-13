@@ -19,12 +19,8 @@ Notese que las primeras dos fallan dado que no
 | Column Name    | Data Type     | Constraints          | Example Value                |
 | :------------- | :------------ | :------------------- | :--------------------------- |
 | **course_id** | `INT`         | PRIMARY KEY, AI      | `1`                          |
-| **subject** | `VARCHAR(10)` | NOT NULL             | `CS101`                      |
-| **title** | `VARCHAR(100)`| NOT NULL             | `Intro to Computer Science`  |
+| **course_title** | `VARCHAR(100)`| NOT NULL             | `Intro to Computer Science`  |
 | **credits** | `DECIMAL`     | DEFAULT 3.0          | `4.0`                        |
-| **description**| `TEXT`        | -                    | `Fundamentals of programming`|
-| **professor** | `VARCHAR(100)`| -                    | `Dr. Alan Turing`            |
-| **capacity** | `INT`         | DEFAULT 30           | `50`                         |
 
 --- 
 
