@@ -1,14 +1,18 @@
-# About
+# Overview
 
-This is the first module [Getting Started with APIs](https://www.coursera.org/learn/getting-started-with-apis), here I had an introduction to:
+Este es el primer módulo [Getting Started with APIs](https://www.coursera.org/learn/getting-started-with-apis) donde vemos una introducción a:
 
 - **RESTful** API design principles (methods, status codes, routes)
-- Clear [*Documentation*](./final_project/documentation.md) 
-- Manual testing with **Postman** and automated testing via python scripts <br>
+- [*Documentación*](./final_project/documentation.md) 
+- Testing manual con **Postman** y automatizado via python. <br>
 
-This module did NOT discuss security, authentication nor protection tools so this project assumes no bad actors get access to the endpoints.
+En este curso NO se habla de seguridad, autenticación ni nada por el estilo, por lo tanto me tomo la libertad de asumir que no hay malos actores en este contexto.
 
-# Certificate of Completion
+
+> Nota: Para este curso había que hacer una documentación sobre un proyecto final y decidí hacerla en inglés.
+
+
+# Certificado
 
 ![alt text](certificate.png)
 
