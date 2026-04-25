@@ -33,7 +33,7 @@ Una parte fundamental del manejo de API's (y servicios en general) es el princip
 - ### Control de Acceso Basado en Atributos (ABAC en inglés)
     Los permisos basados en atributos tienen la particularidad de estar ligados al contexto de la acción y no únicamente a quien la realiza (a diferencia de RBAC). Esto pérmite un hilado más fino en el otorgamiento de permisos para situaciones específicas, por ejemplo uno podría tener el escenario en el cual un usuario puede acceder a un archivo únicamente estando conectado desde una máquina en la oficina (y no vía _home office_) por lo tanto habría que poder diferenciar esos dos casos de simplemente ser un usuario "permitido".
 
-> Observación <br> En general no es que se implementa uno u otro, sino que se parte de RBAC para un prototipado rápido y sencillo y despues se extiende el hilado fino mediante ABAC.
+> En general no es que se implementa uno u otro, sino que se parte de RBAC para un prototipado rápido y sencillo y despues se extiende el hilado fino mediante ABAC.
 
 
 
