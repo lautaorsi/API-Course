@@ -34,3 +34,58 @@ Son funciones que se encargan de conectar el esquema con las bases de datos, act
 -   _info_ 
     Contiene información sobre la ejecución de la consulta/mutación
 
+## Suscripciones
+
+Similar a los web sockets, permiten la comunicación en tiempo real entre servidor y cliente 
+
+## Federación
+
+Un metodo de escalado basado en combinar múltiples servicios GraphQL en una única API. Esto permite esquemas descentralizados y puntos de acceso unificados.  
+
+## Técniacas de Escalado
+
+-   Escalado Horizontal
+
+    Correr múltiples servidores de GraphQL manejados por un orquestrador de cargas.
+
+-   Federación
+
+-   Rate Limiting
+
+    Limitar la cantidad de consultas por un mismo cliente e impedir queries pesadas que bloquen al sistema.
+
+## Cacheo y Manejo de Errores 
+
+-   Cacheo
+    -   Client-Side 
+
+        Mantener la información consultada recientemente en el cliente. (Débil a ataques)
+
+    -   Server-Side
+
+        Mantener la información cacheada en el servidor.
+        (Carga extra en el servidor pero más fuerte contra ataques)
+
+    -   Field-Level
+
+        Mantener la información en los resolvers, siempre y cuando la información cambie muy pocas veces.
+
+
+-   Errores
+    
+    Siempre debemos devolver objetos JSON válidos y estructurados acorde al error para permitir debugging más sencillo y handleo adecuado por parte del cliente.
+
+## Testing
+
+-   Testeo Unitario de Resolvers
+
+    Testear indivdualmente cada resolver para asegurar que tengan el comportamiento esperado
+
+-   Testeo Integral
+
+    Validar consultas y mutaciones en un servidor de prueba
+
+-   Testeo End-to-End 
+
+    Simular interacciones por parte de un cliente a la API
+
